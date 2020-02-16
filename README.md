@@ -28,6 +28,7 @@ spec:
     - domainName: quay.io
     - domainName: docker.io
     - domainName: registry.connect.redhat.com
+    - domainName: registry.access.redhat.com
     - domainName: 'registry.example.com:5000'
       insecure: true
   registrySources:
@@ -36,6 +37,7 @@ spec:
       - registry.redhat.io
       - docker.io
       - quay.io
+      - registry.access.redhat.com
       - registry.connect.redhat.com
       - 'registry.example.com:5000'
     insecureRegistries:
