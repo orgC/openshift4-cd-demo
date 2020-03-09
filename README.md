@@ -10,10 +10,10 @@ OCP4.3 已将 jenkins pipeline 置于弃用状态，新项目可选基于 tekton
 * 假定已复制以下镜像到本地镜像仓库
 ```
 skopeo copy docker://registry.redhat.io/openshift3/jenkins-agent-maven-35-rhel7:latest docker://registry.example.com:5000/openshift3/jenkins-agent-maven-35-rhel7:latest"
-skopeo copy docker://docker.io/openshiftdemos/gogs:0.11.34 docker://registry.example.com:5000/openshiftdemos/gogs:0.11.34"
-skopeo copy docker://docker.io/sonatype/nexus3:3.13.0 docker://registry.example.com:5000/sonatype/nexus3:3.13.0"
-skopeo copy docker://docker.io/siamaksade/sonarqube:latest docker://registry.example.com:5000/siamaksade/sonarqube:latest"
-skopeo copy docker://registry.redhat.io/jboss-eap-7/eap72-openshift:latest docker://registry.example.com:5000/jboss-eap-7/eap72-openshift:latest"
+skopeo copy docker://docker.io/openshiftdemos/gogs:0.11.34 docker://registry.example.com:5000/openshiftdemos/gogs:0.11.34
+skopeo copy docker://docker.io/sonatype/nexus3:3.13.0 docker://registry.example.com:5000/sonatype/nexus3:3.13.0
+skopeo copy docker://docker.io/siamaksade/sonarqube:latest docker://registry.example.com:5000/siamaksade/sonarqube:latest
+skopeo copy docker://registry.redhat.io/jboss-eap-7/eap72-openshift:latest docker://registry.example.com:5000/jboss-eap-7/eap72-openshift:latest
 ```
 
 * 对应的 ocp4.3 已经修改镜像下载规则.
