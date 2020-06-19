@@ -242,7 +242,7 @@ objects:
         <containers>
           <org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
             <name>jnlp</name>
-            <image>registry.example.com:5000/openshift3/jenkins-agent-appdev</image>
+            <image>registry.ocp43.io:5000/openshift3/jenkins-agent-appdev</image>
             <privileged>false</privileged>
             <alwaysPullImage>false</alwaysPullImage>
             <workingDir>/tmp</workingDir>

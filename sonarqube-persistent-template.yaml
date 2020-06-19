@@ -16,7 +16,7 @@ objects:
         tags: sonarqube
       from:
         kind: DockerImage
-        name: registry.example.com:5000/siamaksade/sonarqube:latest
+        name: registry.ocp43.io:5000/siamaksade/sonarqube:latest
       importPolicy:
         insecure: true
       name: latest

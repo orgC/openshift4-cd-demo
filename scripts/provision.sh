@@ -24,7 +24,7 @@ function usage() {
     echo
     echo "OPTIONS:"
     echo "   --enable-quay              Optional    使用内部仓库 Enable integration of build and deployments with quay."
-    echo "   --quay-domain              Optional    使用内部仓库地址 registry.example.com:5000 ."
+    echo "   --quay-domain              Optional    使用内部仓库地址 registry.ocp43.io:5000 ."
     echo "   --quay-username            Optional    quay username to push the images to a quay.io account. Required if --enable-quay is set"
     echo "   --quay-password            Optional    quay password to push the images to a quay.io account. Required if --enable-quay is set"
     echo "   --user [username]          Optional    The admin user for the demo projects. Required if logged in as system:admin"
@@ -32,12 +32,12 @@ function usage() {
     echo "   --ephemeral                Optional    Deploy demo without persistent storage. Default false"
     echo "   --oc-options               Optional    oc client options to pass to all oc commands e.g. --server https://my.openshift.com"
     echo ""
-    echo "假定以下几个镜像已经存放于 registry.example.com:5000 仓库,如果位置变化需修改各自 ImageStream 下载位置.本脚本默认OCP4能上registry.redhat.io下载镜像,如果不可行，按离线处理镜像下载"
-    echo "skopeo copy docker://registry.redhat.io/openshift3/jenkins-agent-maven-35-rhel7:latest docker://registry.example.com:5000/openshift3/jenkins-agent-maven-35-rhel7:latest"
-    echo "skopeo copy docker://docker.io/openshiftdemos/gogs:0.11.34 docker://registry.example.com:5000/openshiftdemos/gogs:0.11.34"
-    echo "skopeo copy docker://docker.io/sonatype/nexus3:3.13.0 docker://registry.example.com:5000/sonatype/nexus3:3.13.0"
-    echo "skopeo copy docker://docker.io/siamaksade/sonarqube:latest docker://registry.example.com:5000/siamaksade/sonarqube:latest"
-    echo "skopeo copy docker://registry.redhat.io/jboss-eap-7/eap72-openshift:latest docker://registry.example.com:5000/jboss-eap-7/eap72-openshift:latest"
+    echo "假定以下几个镜像已经存放于 registry.ocp43.io:5000 仓库,如果位置变化需修改各自 ImageStream 下载位置.本脚本默认OCP4能上registry.redhat.io下载镜像,如果不可行，按离线处理镜像下载"
+    echo "skopeo copy docker://registry.redhat.io/openshift3/jenkins-agent-maven-35-rhel7:latest docker://registry.ocp43.io:5000/openshift3/jenkins-agent-maven-35-rhel7:latest"
+    echo "skopeo copy docker://docker.io/openshiftdemos/gogs:0.11.34 docker://registry.ocp43.io:5000/openshiftdemos/gogs:0.11.34"
+    echo "skopeo copy docker://docker.io/sonatype/nexus3:3.13.0 docker://registry.ocp43.io:5000/sonatype/nexus3:3.13.0"
+    echo "skopeo copy docker://docker.io/siamaksade/sonarqube:latest docker://registry.ocp43.io:5000/siamaksade/sonarqube:latest"
+    echo "skopeo copy docker://registry.redhat.io/jboss-eap-7/eap72-openshift:latest docker://registry.ocp43.io:5000/jboss-eap-7/eap72-openshift:latest"
     echo ""
 
 # 对应的 ocp4 需要修改镜像下载规则.
@@ -51,7 +51,7 @@ function usage() {
 #     - domainName: quay.io
 #     - domainName: docker.io
 #     - domainName: registry.connect.redhat.com
-#     - domainName: 'registry.example.com:5000'
+#     - domainName: 'registry.ocp43.io:5000'
 #       insecure: true
 #   registrySources:
 #     allowedRegistries:
@@ -60,9 +60,9 @@ function usage() {
 #       - docker.io
 #       - quay.io
 #       - registry.connect.redhat.com
-#       - 'registry.example.com:5000'
+#       - 'registry.ocp43.io:5000'
 #     insecureRegistries:
-#       - 'registry.example.com:5000'
+#       - 'registry.ocp43.io:5000'
 
 }
 

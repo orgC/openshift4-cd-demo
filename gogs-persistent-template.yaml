@@ -238,7 +238,7 @@ objects:
     - name: "${GOGS_VERSION}"
       from:
         kind: DockerImage
-        name: registry.example.com:5000/openshiftdemos/gogs:${GOGS_VERSION}
+        name: registry.ocp43.io:5000/openshiftdemos/gogs:${GOGS_VERSION}
       importPolicy:
         insecure: true
       annotations:
